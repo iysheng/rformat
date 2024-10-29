@@ -1,0 +1,11 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Astyle settings for vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! Astyle()
+execute 'silent ! astyle --style=bsd %'
+endfunction
+
+map <silent> <leader>f :call Astyle()<CR>
+map <silent> <leader>n :call Astyle()<CR>
