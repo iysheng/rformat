@@ -21,3 +21,6 @@ endfunction
 
 command! Astyle :call AstyleDo()
 map <silent> <leader>f : Astyle<CR>
+
+" set autoread, 避免提示文件修改重新载入
+set autoread
