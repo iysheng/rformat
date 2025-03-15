@@ -24,7 +24,9 @@ endfunction
 " let g:astyle_exist = Find_astyle()
 
 function! AstyleDo()
-  if &filetype != 'python'
+  if &filetype == 'markdown'
+    execute 'Prettier' | execute 'redraw!'
+  elseif &filetype != 'python'
     execute 'silent ! ' . g:astyle_command . ' --style=bsd %' | execute 'redraw!'
   else
     execute 'silent ! ' . g:ruff_command . ' format %' | execute 'redraw!'
